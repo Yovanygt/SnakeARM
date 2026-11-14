@@ -1,0 +1,29 @@
+SNAKE ARM - Videojuego en ensamblador ARM para Arduino Due (Cortex-M3)
+=======================================================================
+
+MODULOS (todo el juego esta en ensamblador, archivos .S)
+  main_arm.S     Programa principal y maquina de estados (menu, juego, game over)
+  game_arm.S     Logica del Snake: movimiento, comida, colisiones, puntaje
+  video_arm.S    Pantalla OLED SSD1306 por SPI, framebuffer de 1024 bytes y fuente 5x7
+  inputs_arm.S   Joystick: ADC (ejes X/Y) y boton Z por registros
+  timer_arm.S    Temporizadores por hardware (TC0) e interrupciones con NVIC
+  control_arm.S  Clasificacion de la direccion del joystick
+  SnakeARM.ino   Archivo minimo en C: solo llama a asm_main()
+
+CONEXIONES
+  OLED SCK  -> pin 13 (PB27)      Joystick VRx -> A0 (PA16, canal ADC 7)
+  OLED SDA  -> pin 11 (PD7)       Joystick VRy -> A1 (PA24, canal ADC 6)
+  OLED CS   -> pin 10 (PC29)      Joystick SW  -> pin 2 (PB25)
+  OLED DC   -> pin 9  (PC21)      Alimentacion: 3.3 V y GND
+  OLED RES  -> pin 8  (PC22)
+
+COMO COMPILAR Y CARGAR
+  1. Abrir SnakeARM.ino con el Arduino IDE (placa: Arduino Due, Programming Port).
+  2. Verificar y Subir. No se necesita ninguna biblioteca.
+
+NOTAS
+  - No se usa la API de Arduino ni bibliotecas graficas: los perifericos
+    (PIO, ADC, TC, NVIC, PMC) se manejan por registros mapeados en memoria.
+  - El arranque del chip (reloj de 84 MHz y tabla de vectores) lo realiza
+    el codigo de inicio de la placa; el IDE se usa solo para ensamblar y cargar.
+  - Tiempos: cuadros a 30 Hz (TC0 canal 0) y fisicas cada 150 ms (TC0 canal 1).
