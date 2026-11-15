@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/lenguaje-Ensamblador%20ARM%20Thumb--2-6E4C13" alt="Lenguaje: ensamblador ARM Thumb-2">
   <img src="https://img.shields.io/badge/pantalla-OLED%20SSD1306-444444" alt="Pantalla: OLED SSD1306">
   <img src="https://img.shields.io/badge/estado-funcional-2EA44F" alt="Estado: funcional">
-  <a href="https://youtu.be/Rwx-oCJj6pY"><img src="https://img.shields.io/badge/video-demostraci%C3%B3n-FF0000?logo=youtube&logoColor=white" alt="Video de demostración"></a>
+  <a href="https://youtu.be/sMG-gKS1RQw"><img src="https://img.shields.io/badge/video-demostraci%C3%B3n-FF0000?logo=youtube&logoColor=white" alt="Video de demostración"></a>
 </p>
 
 <p align="center">
@@ -40,8 +40,8 @@
 ## Demostración en video
 
 <p align="center">
-  <a href="https://youtu.be/Rwx-oCJj6pY">
-    <img src="https://img.youtube.com/vi/Rwx-oCJj6pY/hqdefault.jpg" width="60%" alt="Ver el video de demostración de Snake ARM en YouTube">
+  <a href="https://youtu.be/sMG-gKS1RQw">
+    <img src="https://img.youtube.com/vi/sMG-gKS1RQw/hqdefault.jpg" width="60%" alt="Ver el video de demostración de Snake ARM en YouTube">
   </a>
 </p>
 
@@ -193,7 +193,7 @@ SnakeARM/
 
 ## Documentación
 
-Video de la demostración funcional: <https://youtu.be/Rwx-oCJj6pY>
+Video de la demostración funcional: <https://youtu.be/sMG-gKS1RQw>
 
 El [reporte técnico](Reporte_Tecnico_SnakeARM.docx) detalla el mapa de memoria, el diagrama de la máquina de estados, el esquema de conexión, el cálculo de tiempos de refresco y el uso de la pila según AAPCS.
 
